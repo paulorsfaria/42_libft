@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 16:56:44 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/19 11:01:41 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/19 10:55:36 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/19 11:01:32 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
+ void ft_bzero(void *s, size_t n)
+ {
 	size_t	i;
 	
 	i = 0;
-	if(size == 0)
-		return ((size_t)ft_strlen(src));
-	while(src[i] != '\0' && i < size - 1)
+	while (i < n)
 	{
-		dst[i] = src[i];
-		i++; 
+		((char *)s)[i] = 0;
+		i++;
 	}
-	dst[i] = '\0';
-	return ((size_t)ft_strlen(src));	
-}
+	
+ }
