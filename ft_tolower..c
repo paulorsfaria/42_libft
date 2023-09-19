@@ -6,11 +6,11 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:18:32 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/16 16:21:09 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/19 10:38:11 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	return (c + 32);
 }
