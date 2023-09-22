@@ -33,5 +33,5 @@ int	ft_strlen(const char *str);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 int	ft_tolower(int c);
 int ft_tolower(int c);
-
+void 	*memset(void *ptr, int value, size_t num);
 #endif
