@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:21:31 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/23 15:03:17 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/23 15:41:19 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 int	ft_tolower(int c);
 int	ft_tolower(int c);
 void 	*memset(void *ptr, int value, size_t num);
-int strncmp(const char *str1, const char *str2, size_t n);
+int	ft_strncmp(const char *str1, const char *str2, size_t n);
+size_t ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif
