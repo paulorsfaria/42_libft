@@ -6,9 +6,11 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:22:43 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/16 16:23:09 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/23 14:59:23 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int ft_tolower(int c)
 {

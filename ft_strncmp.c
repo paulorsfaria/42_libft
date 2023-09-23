@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 22:41:21 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/23 14:58:48 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/23 15:01:49 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/23 15:10:55 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strchr(const char *str, int c)
+int strncmp(const char *str1, const char *str2, size_t n)
 {
-	int	i;
-	
+	size_t	i;
 	i = 0;
-	while((str[i] != (char)c) && str[i] != '\0')
+	while((str1[i] != '\0' || str2[i] != '\0') && i < n)
+	{
+		if(str1[i] != str2[i])
+			return (int)(str1[i] - str2[i]);
 		i++;
-	if(str[i] == (char)c)
-		return((char *)&str[i]);
-	else
-		return('\0');
+	}
+	return (0);
 }

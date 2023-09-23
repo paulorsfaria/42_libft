@@ -6,14 +6,24 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:21:31 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/21 11:21:31 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/23 15:03:17 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
+# include <ctype.h>
+# include <stdio.h>
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /*Imaginary struct that makes code work*/
 /*https://tenor.com/view/spongebob-magic-gif-18115910*/
@@ -32,6 +42,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int	ft_strlen(const char *str);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 int	ft_tolower(int c);
-int ft_tolower(int c);
+int	ft_tolower(int c);
 void 	*memset(void *ptr, int value, size_t num);
+int strncmp(const char *str1, const char *str2, size_t n);
+
 #endif
