@@ -25,11 +25,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-/*Imaginary struct that makes code work*/
-/*https://tenor.com/view/spongebob-magic-gif-18115910*/
-/*maaaaaaaaaaaaaaaaaaaaaaaaaaaaagggggggggggiiiiiiiccc*/
-
-
 int	atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int	ft_isalnum(int c);
@@ -45,6 +40,7 @@ int	ft_tolower(int c);
 int	ft_tolower(int c);
 void 	*memset(void *ptr, int value, size_t num);
 int	ft_strncmp(const char *str1, const char *str2, size_t n);
-size_t ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void	*memmove(void *dest, const void *src, size_t n);
 
 #endif
