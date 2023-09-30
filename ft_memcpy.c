@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/24 13:43:27 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/28 17:02:32 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/28 17:07:54 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/28 17:21:52 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-void	*memmove(void *dest, const void *src, size_t n)
+//#include <libft.h>
+
+#include <stdio.h>
+#include <string.h>
+
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*desteny;
 	const unsigned char	*source;
 
 	desteny = (unsigned char *) dest;
 	source = (const unsigned char *) src;
-
-	if (desteny == source)
+	while(*source != '\0' && n > 0)
 	{
-		return (dest);	
+		*desteny = *source;
+		desteny++;
+		source++;
+		n--;
 	}
-	if(desteny < source )
-	
-	
-	}
+	*desteny = '\0';
+	return(dest);
+}

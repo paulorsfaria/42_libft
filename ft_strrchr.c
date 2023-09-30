@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/24 13:43:27 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/28 17:02:32 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/09/28 17:24:29 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/09/30 14:10:01 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-void	*memmove(void *dest, const void *src, size_t n)
+char	*ft_strrchr(const char *str, int c)
 {
-	unsigned char	*desteny;
-	const unsigned char	*source;
-
-	desteny = (unsigned char *) dest;
-	source = (const unsigned char *) src;
-
-	if (desteny == source)
+	int	i;
+	
+	i = ft_strlen(str);
+	
+	while (i >= 0)
 	{
-		return (dest);	
+		if(str[i] == (char)c)
+			return((char *)&str[i]);
+		i--;
 	}
-	if(desteny < source )
-	
-	
-	}
+	return('\0');
+}
