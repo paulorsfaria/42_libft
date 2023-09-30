@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:21:31 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 15:14:30 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:28:42 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int	atoi(const char *str);
+int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
