@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:24:13 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 15:30:07 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:09:09 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,28 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sinal;
-	int	result;
+	size_t	i;
+	size_t	sinal;
+	size_t	result;
 
 	i = 0;
 	sinal = 1;
 	result = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		while(str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 			i++;
-		if(str[i] == '-')
+		if (str[i] == '-')
 		{
 			sinal *= -1;
 			i++;
 		}
-		while(str[i] >= '0' && str[i] <= '9')
+		while (str[i] >= '0' && str[i] <= '9')
 		{
 			result = (result * 10) + (str[i] - '0');
 			i++;
 		}
 		return (result * sinal);
 	}
-	return(0);
-	
+	return (0);
 }

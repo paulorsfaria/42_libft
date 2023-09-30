@@ -6,13 +6,13 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:22:43 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 15:12:58 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:24:19 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	return (c + 32);
 }

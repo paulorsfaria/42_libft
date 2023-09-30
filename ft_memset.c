@@ -6,17 +6,18 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:39:23 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 15:10:42 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:16:26 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memset(void *ptr, int value, size_t num)
+void	*memset(void *ptr, int value, size_t num)
 {
 	unsigned char	*val;
+
 	val = ptr;
-	while(num > 0)
+	while (num > 0)
 	{
 		*val++ = value;
 		num--;

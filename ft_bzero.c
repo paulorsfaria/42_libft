@@ -6,21 +6,20 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 10:55:36 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 15:09:41 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:11:02 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- void ft_bzero(void *s, size_t n)
- {
+void	ft_bzero(void *s, size_t n)
+{
 	size_t	i;
-	
+
 	i = 0;
 	while (i < n)
 	{
 		((char *)s)[i] = 0;
 		i++;
 	}
-	
- }
+}
