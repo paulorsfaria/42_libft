@@ -6,11 +6,11 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:01:49 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/23 15:41:24 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:11:39 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int ft_strncmp(const char *str1, const char *str2, size_t n)
 {

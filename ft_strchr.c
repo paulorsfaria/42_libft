@@ -6,11 +6,11 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 22:41:21 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/23 14:58:48 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:10:46 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

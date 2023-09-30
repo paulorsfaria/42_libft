@@ -6,11 +6,11 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:24:13 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/23 14:57:38 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:09:32 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	atoi(const char *str)
 {

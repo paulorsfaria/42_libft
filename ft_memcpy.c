@@ -6,14 +6,11 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 17:07:54 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/28 17:21:52 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:10:27 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <libft.h>
-
-#include <stdio.h>
-#include <string.h>
+#include "libft.h">
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {

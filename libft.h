@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:21:31 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/28 17:24:16 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:14:30 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_tolower(int c);
 void 	*memset(void *ptr, int value, size_t num);
 int	ft_strncmp(const char *str1, const char *str2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-void	*memmove(void *dest, const void *src, size_t n);
+//void	*memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strrchr(const char *s, int c);
 

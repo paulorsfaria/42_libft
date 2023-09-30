@@ -6,16 +6,16 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:17:23 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/23 14:59:09 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:16:24 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
