@@ -6,11 +6,9 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:16:35 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 16:13:13 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:27:59 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

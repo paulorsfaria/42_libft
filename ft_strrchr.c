@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 17:24:29 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 16:23:46 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:30:29 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strrchr(const char *str, int c)
 			return ((char *)&str[i]);
 		i--;
 	}
-	return ('\0');
+	return (NULL);
 }

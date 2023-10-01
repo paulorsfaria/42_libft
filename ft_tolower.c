@@ -6,13 +6,14 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 14:42:33 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 16:24:08 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:54:32 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_tolower(int c)
 {
-	return (c + 32);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	else
+		return (c);
 }

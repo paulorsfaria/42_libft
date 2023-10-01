@@ -6,11 +6,9 @@
 /*   By: paulo-do <paulo-do@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 15:29:49 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/09/30 16:14:15 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:28:09 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {
