@@ -17,9 +17,15 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char *newString;
 	i = 0;
+	if (len >= 0)
+		return (NULL);
 	newString = (char*)malloc(sizeof(char) * (len + 1));
 	if(newString == NULL)
+	{
+		free(newString);
 		return (NULL);
+	}
+
 	while(i < len && s[start] != '\0')
 	{
 		newString[i] = s[start];
@@ -27,10 +33,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 	}
 	newString[i] = '\0';
-	if (i == 0)
-	{
-		free(newString);
-		return (NULL);
-	}
 	return(newString);
 }
