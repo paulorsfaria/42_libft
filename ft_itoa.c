@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paulo-do <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 19:54:07 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/08 20:16:51 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/10/08 20:18:11 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/10/08 20:18:58 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+char	*ft_itoa(int n)
 {
-	unsigned int	i;
 	
-	i = 0;
-	while (s[i] != '\0')
-	{
-		f(i, &s[i]);
-		i++;
-	}
 }
