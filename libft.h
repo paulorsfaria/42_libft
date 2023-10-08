@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:21:31 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/08 17:47:28 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/08 19:54:42 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 typedef struct s_list
 {
 	void			*content;
-	struct s_list	*next;
+	struct s_list		*next;
 }	t_list;
 
 int	ft_atoi(const char *str);
@@ -51,4 +51,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strdup(const char *str1);
 void	*ft_calloc(size_t n, size_t size);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
