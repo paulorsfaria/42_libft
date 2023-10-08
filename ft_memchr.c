@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 14:41:05 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/07 16:09:33 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/08 15:32:51 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	unsigned int	i;
 	unsigned char	*str;
 
 	str = (unsigned char *)s;
