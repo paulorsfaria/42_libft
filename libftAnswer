@@ -2,3 +2,7 @@ unsigned char is used on strncmp to handle the negative numbers
 why is size_t used?
 size_t is the same as unsigned int(so it cant be negative) plus its normally used to 
 (Type (int, char ...) convert before sending 
+
+
+
+calloc gets the size of bits(char, int blah blah blah) and the lenght so its like malloc (type * lenght)
