@@ -16,54 +16,58 @@ char	convert_me_daddy(int n)
 {
 	return (n + 48);
 }
-int	count_numbers(int n)
+
+static long int	count_numbers(int n)
 {
 	int	counter;
 
 	counter = 0;
-
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
+		n = n * -1;
 		counter++;
-		n = n * - 1;
 	}
-	while (n !=  0)
+	while (n != 0)
 	{
-		n = n / 10;
 		counter++;
+		n = n / 10;
 	}
 	return (counter);
 }
 
+static char	*if_zero(char *str)
+{
+	str[0] = '0';
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
-	int	size;
-	char	*number;
-	
+	int			size;
+	char		*number;
+	long int	nb;
+
+	nb = n;
 	size = count_numbers(n);
-	if (n == 0)
-		return (ft_strdup("0"));
-	number = (char *)malloc(sizeof(char) * (size + 1));
+	if (!size)
+		return (NULL);
+	number = (char *) malloc(sizeof (char) * (size + 1));
 	if (!number)
 		return (NULL);
-	if (n == -2147483648)
-	{
-		number = "-2147483648";
-		return (number);
-	}
-	if (n < 0)
+	number[size--] = '\0';
+	if (nb == 0)
+		return (if_zero(number));
+	if (nb < 0)
 	{
 		number[0] = '-';
-		n = n * -1;
-		size--;
+		nb = -nb;
 	}
-	number[size--] = '\0';
-	while (size >= 0)
+	while (nb > 0)
 	{
-		number[size] = convert_me_daddy(n%10);
-		size--;
-		n = n / 10;	
+		number[size--] = convert_me_daddy(nb % 10);
+		nb = nb / 10;
 	}
 	return (number);
-	
 }
