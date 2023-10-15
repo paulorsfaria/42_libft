@@ -6,17 +6,19 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:26:50 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/14 21:51:53 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/15 15:08:02 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t word_count(char const *str, char c)
+static size_t	word_count(char const *str, char c)
 {
-	size_t	i = 0;
-	size_t	word = 0;
-	
+	size_t	i;
+	size_t	word;
+
+	i = 0;
+	word = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] == c)
@@ -26,25 +28,23 @@ static size_t word_count(char const *str, char c)
 		while (str[i] != c && str[i] != '\0')
 			i++;
 	}
-
 	return (word);
-
 }
 
-static size_t count_letters(char const *s, char c, size_t i)
+static size_t	count_letters(char const *s, char c, size_t i)
 {
 	size_t	size;
-	
+
 	size = i;
 	while (s[i] != '\0' && s[i] != c)
 		i++;
-	return(i - size);
+	return (i - size);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 	char	**split;
 
 	i = 0;
@@ -52,24 +52,12 @@ char **ft_split(char const *s, char c)
 	split = (char **)malloc(sizeof(char *) * ((word_count(s, c)) + 1));
 	if (!split)
 		return (NULL);
-	while (s[i] != '\0')
+	while (j < word_count(s, c))
 	{
-		if(s[i] !=c)
-		{		split[j] = ft_substr(s, i, count_letters(s, c, i));
-				i = i + count_letters(s, c, i);
-				j++;
-		}
 		while (s[i] == c)
-		{
 			i++;
-			if (s[i] != c)
-			{
-				split[j] = ft_substr(s, i, count_letters(s, c, i));
-				i = i + count_letters(s, c, i);
-				j++;
-			}
-		}
-		i++;
+		split[j++] = ft_substr(s, i, count_letters(s, c, i));
+		i = i + count_letters(s, c, i);
 	}
 	split[j] = NULL;
 	return (split);
