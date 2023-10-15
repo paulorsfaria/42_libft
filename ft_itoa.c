@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo-do <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:18:11 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/08 22:16:44 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/15 15:29:40 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	convert_me_daddy(int n)
-{
-	return (n + 48);
-}
 
 static long int	count_numbers(int n)
 {
@@ -66,7 +61,7 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		number[size--] = convert_me_daddy(nb % 10);
+		number[size--] = (nb % 10) + 48;
 		nb = nb / 10;
 	}
 	return (number);
