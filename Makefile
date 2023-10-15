@@ -13,11 +13,18 @@ ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
+all: $(NAME)
+
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
-bonus: $(OBJS)
-	ar rc $(NAME) $(OBJS)
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS)
