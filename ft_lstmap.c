@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 16:09:22 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/28 13:50:09 by paulo-do         ###   ########.fr       */
+/*   Created: 2023/10/21 09:47:22 by paulo-do          #+#    #+#             */
+/*   Updated: 2023/10/28 14:16:29 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (s != NULL)
+	t_list	new;
+	void *cnt;
+	
+	while (lst->next)
 	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
+		cnt = f(lst->content);
+		
 	}
 }

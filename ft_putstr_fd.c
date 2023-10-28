@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 15:59:06 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/15 16:26:14 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/28 13:51:32 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if (!s)
-		return ;
-	while (s[i] != '\0')
-		ft_putchar_fd(s[i++], fd);
+	if (s != NULL)
+	{
+		while (s[i] != '\0')
+			ft_putchar_fd(s[i++], fd);
+	}
 }
