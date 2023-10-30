@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 09:47:22 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/28 14:16:29 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:29:38 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	new;
-	void *cnt;
+	t_list	*lista;
+	t_list	*first;
 	
-	while (lst->next)
-	{
-		cnt = f(lst->content);
-		
+	if(!lst ||!f ||!del)
+		return (NULL);
+	lista = ft_lstnew(f(lst->content));
+	first = lista;
+	while(lst->next != NULL)
+	{	
+		lst = lst->next;
+		lista = ft_lstnew(f(lst->content));
+		if(!lista->next)
+			ft_lstclear(&lista, del);
+		lista = lista->next;
 	}
+	return(lista);
 }

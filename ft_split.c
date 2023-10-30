@@ -6,12 +6,22 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:26:50 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/15 15:28:14 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:24:40 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void *free_hem(char **s, size_t i)
+{
+	while(i > 0)
+	{
+		i--;
+		free(s[i]);
+	}
+	free(s);
+	return (NULL);
+}
 static size_t	word_count(char const *str, char c)
 {
 	size_t	i;
@@ -51,12 +61,18 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	split = (char **)malloc(sizeof(char *) * ((word_count(s, c)) + 1));
 	if (!split)
+	{
+		free(split);
 		return (NULL);
+	}
 	while (j < word_count(s, c))
 	{
 		while (s[i] == c)
 			i++;
-		split[j++] = ft_substr(s, i, count_letters(s, c, i));
+		split[j] = ft_substr(s, i, count_letters(s, c, i));
+		if(!split[j])
+			return(free_hem(split, j));
+		j++;
 		i = i + count_letters(s, c, i);
 	}
 	split[j] = NULL;

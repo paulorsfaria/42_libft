@@ -6,17 +6,17 @@
 /*   By: paulo-do <paulo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:03:32 by paulo-do          #+#    #+#             */
-/*   Updated: 2023/10/15 18:43:57 by paulo-do         ###   ########.fr       */
+/*   Updated: 2023/10/30 12:53:43 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if(!lst)
-		return(0);
-	while(lst->next)
+	if (!lst)
+		return (0);
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }
